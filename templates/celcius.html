@@ -1,0 +1,26 @@
+{% extends 'basetemp.html' %}
+
+{% block body %}
+ <title>Celcius to Fareheit</title>
+<div class="container mb-3">
+    <h3>
+        Convert to Farenheit
+          <small class="text-muted">Celuis to Farenheit</small>
+    </h3>
+</div>
+<form action="/tempc" method="POST">
+<div class="container mb-3">
+    <input type="number" class="form-control" name="c" id="c" placeholder="Celcius">
+    <label for="c">Enter temperature in celcius</label>
+</div>
+    <div class="container mb-3" >
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+</form>
+<p   background-color: lightblue class="container mb-3" >
+         {{fahrenheit}}
+</p>
+
+
+{% endblock body %}
